@@ -1,0 +1,120 @@
+<!DOCTYPE html> <html lang="fr"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> TrackAI | Jean Sieres </title> <meta name="author" content="Jean Sieres"> <meta name="description" content="Une voiture qui apprend à piloter sur un circuit 3D par apprentissage par renforcement"> <meta name="keywords" content="machine learning, apprentissage par renforcement, data science, télédétection, immobilier, portfolio"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A7%A0&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://jean808.github.io/projects/trackai/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Jean</span> Sieres </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">accueil </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">Projets <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">dépôts </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">TrackAI</h1> <p class="post-description">Une voiture qui apprend à piloter sur un circuit 3D par apprentissage par renforcement</p> </header> <article> <p><strong>En bref.</strong> Un jeu de course en 3D qui tourne dans le navigateur, et une IA qui apprend seule à y piloter, par essais et erreurs, grâce à l’apprentissage par renforcement. Projet en équipe, code public : <a href="https://github.com/arthurmath/TrackAI" rel="external nofollow noopener" target="_blank">github.com/arthurmath/TrackAI</a>.</p> <p>TrackAI est la seconde version du projet. La première, <a href="https://github.com/arthurmath/RaceAI" rel="external nofollow noopener" target="_blank">RaceAI</a>, entraînait la voiture sur un circuit en 2D, par algorithme génétique puis par Deep Q-Network (DQN).</p> <h2 id="le-jeu">Le jeu</h2> <ul> <li> <strong>Rendu 3D et physique</strong> : Un jeu web en TypeScript, avec Three.js pour la 3D et Rapier pour la physique du véhicule. Plusieurs circuits et plusieurs voitures.</li> <li> <strong>Le lien avec l’IA</strong> : À chaque instant, le jeu envoie ce que « voit » la voiture à un serveur Python par WebSocket, qui lui renvoie les commandes de conduite.</li> <li> <strong>Un tableau de bord en direct</strong> : Les courbes d’apprentissage s’affichent dans le jeu pendant l’entraînement.</li> </ul> <h2 id="ce-que-lia-voit-et-fait">Ce que l’IA voit et fait</h2> <ul> <li> <strong>Ce qu’elle perçoit</strong> : 14 valeurs, dont sa vitesse, cinq capteurs de distance aux bords de la piste, et la direction et la courbure de la piste devant elle, pour anticiper les virages.</li> <li> <strong>Ce qu’elle décide</strong> : Deux commandes continues, l’accélération ou le freinage, et la direction.</li> <li> <strong>Ce qui la récompense</strong> : Avancer le long de la piste, et vite. Elle est pénalisée si elle s’arrête, recule ou sort de la piste.</li> </ul> <h2 id="lalgorithme">L’algorithme</h2> <p>PPO (Proximal Policy Optimization), codé de zéro en PyTorch, sans bibliothèque d’apprentissage par renforcement :</p> <ul> <li> <strong>Deux réseaux de neurones</strong> : L’un choisit les commandes (l’acteur), l’autre estime si la situation est favorable (le critique).</li> <li> <strong>Plusieurs voitures en parallèle</strong> : Elles roulent en même temps et alimentent une mémoire commune, ce qui accélère l’apprentissage.</li> </ul> <h2 id="résultats">Résultats</h2> <p>Après entraînement, l’agent enchaîne jusqu’à <strong>23 tours de circuit</strong> dans un même épisode.</p> <h2 id="stack">Stack</h2> <p>TypeScript, Vite, Three.js, Rapier, Python, PyTorch, WebSocket.</p> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Jean Sieres. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-accueil",
+    title: "accueil",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-projets",
+          title: "Projets",
+          description: "Une sélection de projets, de la donnée brute à la mise en production.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-publications",
+          title: "Publications",
+          description: "Mémoires et articles, du plus récent au plus ancien.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-dépôts",
+          title: "dépôts",
+          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Paris · jean.s82001 [at] gmail.com · github.com/Jean808",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "projects-dpe-estate",
+          title: 'dpe_estate',
+          description: "Estimer l&#39;étiquette DPE de chaque bâtiment de France à partir d&#39;images et de données ouvertes",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dpe_estate/";
+            },},{id: "projects-terralow",
+          title: 'Terralow',
+          description: "Repérer les biens en vente sous leur valeur, d&#39;après les ventes réelles de chaque immeuble",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/immo_ml/";
+            },},{id: "projects-lycée-iman",
+          title: 'Lycée Iman',
+          description: "Automatisations et outils d&#39;IA pour un établissement scolaire : correction assistée, emplois du temps, gestion",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/lycee_iman/";
+            },},{id: "projects-trackai",
+          title: 'TrackAI',
+          description: "Une voiture qui apprend à piloter sur un circuit 3D par apprentissage par renforcement",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/trackai/";
+            },},{id: "projects-stage-chez-waitack",
+          title: 'Stage chez Waitack',
+          description: "Disposer des objets dans une pièce par apprentissage par renforcement",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/waitack/";
+            },},{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/Jean808", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
